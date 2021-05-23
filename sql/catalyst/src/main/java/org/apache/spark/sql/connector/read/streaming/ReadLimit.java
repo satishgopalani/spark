@@ -39,5 +39,7 @@ public interface ReadLimit {
 
   static ReadLimit allAvailable() { return ReadAllAvailable.INSTANCE; }
 
-  static ReadLimit compositeLimit(long minRows, long maxRows) { return new CompositeReadLimit(minRows, maxRows); }
+  static ReadLimit compositeLimit(long minRows, long maxRows) {
+    return new CompositeReadLimit(minRows, maxRows);
+  }
 }
